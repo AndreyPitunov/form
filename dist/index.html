@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Andrey Pitnov @andreypitunov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intexsoft - test job</title>
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body class="app">
+    
+    <div class="app-container">
+        <div class="app-container__head">
+            <div class="app-container__head-text">План уничтожения пирожков</div>
+            <div class="app-container__dialog-btn">
+                <i class="app-container__icon app-container__icon_close"></i>
+            </div>
+            <div class="app-container__dialog-btn">
+                <i class="app-container__icon app-container__icon_expand"></i>
+            </div>
+        </div>
+        <form action="" class="app-container__form app-form">
+
+            <div class="app-form__row">
+                <div class="app-form__block-label">
+                    <label class="app-form__label">Начинка:</label>
+                    <label class="app-form__label">Форм-фактор:</label>
+                    <label class="app-form__label">Исход:</label>
+                </div>
+                <div class="app-form__block-input">
+                    <input type="text" class="app-form__input" placeholder="Введите значение...">
+                    <input type="text" class="app-form__input" value="Моноблок">
+                    <div style="position:relative;">
+                        <input type="text" class="app-form__input app-form__input_readonly" value="Благоприятный, трансцендентальный" readonly>
+                        <button class="app-form__btn app-form__btn_input app-form__btn_input-clear"><img src="/images/ico_clean.png" alt="очистить"></button>
+                        <button class="app-form__btn app-form__btn_input"><img src="/images/ico_ch.png" alt="Выбрать"></button>
+                    </div>
+                    <div class="app-form__group-btn">
+                        <button class="app-form__btn_button"><img src="/images/ico_add.png" alt="Добавить">Добавить пирожок</button>
+                        <button class="app-form__btn_button">И джема еще</button>
+                        <button class="app-form__btn_button app-form__btn_button-print"><img src="/images/ico_print.png" alt="Печать"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-form__footer">
+                <button class="app-form__btn_button"><img src="/images/ico_client.png" alt="Передать">Передать человеку в красном</button>
+                <div class="app-form__btn-send">
+                    <button type="submit" class="app-form__btn_button app-form__btn_button-send">Выполнить</button>
+                    <button type="reset" class="app-form__btn_button app-form__btn_button-send">Отмена</button>
+                </div>
+                <div class="app-form__resize"></div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

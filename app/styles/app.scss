@@ -1,0 +1,321 @@
+@import "normalize";
+@import "variables";
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	outline: none;
+}
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font: 400 1.4rem/1.4 Tahoma, Verdana, Segoe, sans-serif;
+	background: $color-default;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	//min-width:960px;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+
+}
+
+.app {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	&-container {
+		display: flex;
+		flex-direction: column;
+		min-width: 54rem;
+		min-height: 19.6rem;
+		background: $color-gray;
+		border-right: .1rem solid #57578c;
+		border-left: .1rem solid #57578c;
+		border-top: .1rem solid #9898bb;
+		border-bottom: .1rem solid #9494b7;
+		-webkit-box-shadow: 0px 1px 5px -1px rgba(87,87,140,1);
+		-moz-box-shadow: 0px 1px 5px -1px rgba(87,87,140,1);
+		box-shadow: 0px 1px 5px -1px rgba(87,87,140,1);
+
+		&__head {
+			width: calc(100%-.2rem);
+			height: 2.1rem;
+			margin: .2rem;
+			padding: .3rem;
+			background: linear-gradient(to bottom, #6e71ac 1%,#6e71ac 83%,#57579c 100%);
+			position: relative;
+			color: $color-white;
+			font-size: 1.1rem;
+			line-height: 1.2rem;
+
+			&-text {
+				float: left;
+				padding-left: .4rem;
+			}
+		}
+
+		&__dialog-btn {
+			width: 1.6rem;
+			height: 1.4rem;
+			background: url('/images/btn-normal.png') no-repeat;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			float: right;
+			margin-left: .15rem;
+
+			&:hover {
+				background: url('/images/btn-hover.png') no-repeat;	
+			}
+
+			&:active {
+				background: url('/images/btn-active.png') no-repeat;	
+
+				.app-container__icon {
+					margin-top: .1rem;
+					margin-right: -.2rem;
+				}
+			}
+		}
+
+		&__icon {
+			display: block;
+			width: .8rem;
+			height: .7rem;
+
+			&_close {
+				background: url('/images/ico_close.png') no-repeat;
+			}
+
+			&_expand {
+				width: .9rem;	
+				background: url('/images/ico_expand.png') no-repeat;
+			}
+		}
+
+		&__form {
+			width: 100%;
+			padding: 1rem 1.8rem;
+		}
+	}
+
+	&-form {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		font-size: 1.1rem;
+		padding-bottom: 0;
+
+		&__row {
+			width: 100%;
+			display: flex;
+		}
+
+		&__block {
+			&-label {
+				min-width: 20%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			&-input {
+				width: 75.7%;
+				flex: 1;
+				padding-left: .2rem;
+			}
+		}
+
+		&__label {
+			margin-bottom: .8rem;
+			padding-right: .3rem;
+			font-size: 1.1rem;
+			line-height: 2rem;
+		}
+
+		&__input {
+			width: 100%;
+			height: 2.2rem;
+			margin-bottom: .6rem;
+			padding-left: .5rem;
+			font-size: 1.1rem;
+			line-height: 2.8rem;
+			background: linear-gradient(to bottom, rgba(239,238,251,1) 0%,rgba(247,246,253,1) 5%,rgba(255,255,255,1) 100%);
+			border: .1rem solid #8080a5;
+
+			&_readonly {
+				background: #efeefb;	
+			}
+		}
+
+		::-webkit-input-placeholder {font-style: italic;}
+		::-moz-placeholder          {font-style: italic;}
+		:-moz-placeholder           {font-style: italic;}
+		:-ms-input-placeholder      {font-style: italic;}
+
+		&__btn {
+			//border: .1rem solid #9999cc;
+			border: none;
+
+			&_input {
+				width: 1.8rem;
+				height: 2rem;
+				background: linear-gradient(to bottom, rgba(228,227,249,1) 0%,rgba(228,227,249,1) 72%,rgba(188,188,223,1) 100%);
+				border: .1rem solid #9999cc;
+				position: absolute;
+				right: 0;
+				bottom: .7rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&-clear {
+					right: 1.7rem;
+				}
+
+				&:hover {
+					background: linear-gradient(to bottom, rgba(233,232,250,1) 0%,rgba(228,227,249,1) 72%,rgba(198,198,228,1) 100%);
+					border: .1rem solid #a8a8dc;
+				}
+
+				&:active {
+					background: linear-gradient(to bottom, rgba(218,217,242,1) 0%,rgba(239,239,239,1) 18%,rgba(255,255,255,1) 100%);
+					border: .1rem solid #8282aa;
+
+					& img {
+						padding-top: .1rem;
+					}
+				}
+			}
+
+			&_button {
+				height: 2.2rem;
+				border: .1rem solid #9c9cd5;
+				background: linear-gradient(to bottom, rgba(228,227,249,1) 0%,rgba(228,227,249,1) 86%,rgba(188,188,223,1) 100%);
+				display: flex;
+				justify-content: center;
+				padding: 0 .5rem;
+				margin-right: 0.6rem;
+
+				img {
+					margin-right: .5rem;
+				}
+
+				
+
+				&:hover {
+					background: linear-gradient(to bottom, rgba(233,232,250,1) 0%,rgba(233,232,250,1) 94%,rgba(233,232,250,1) 94%,rgba(198,198,228,1) 100%);
+					border: .1rem solid #a8a8dc;
+				}
+
+				&:active {
+					background: linear-gradient(to bottom, rgba(218,217,242,1) 0%,rgba(239,239,239,1) 18%,rgba(255,255,255,1) 100%);
+					border: .1rem solid #8282aa;
+
+					& {
+						padding-top: .2rem;
+						padding: .2rem .4rem 0 .6rem;
+					}
+				}
+
+				&-print {
+					
+					img {
+						margin-right: 0;
+					}	
+
+					&:active {
+	
+						& img {
+							margin-left: 0;
+						}
+					}
+				}
+
+				&-send {
+					font-size: 1.2rem;
+					padding: 0 1.3rem;
+					color: $color-white;
+					border: .1rem groove #9999e2;
+					background: #6e71ac;
+					margin-right: 0;
+					margin-left: .6rem;
+					line-height: 1rem;
+
+					&:hover {
+						background: #797cbd;
+					}
+
+					&:focus {
+						border: .1rem groove #000;	
+					}
+
+					&:active {
+						background: #6f71ac;
+						border: .1rem groove #000;
+
+						& {
+							padding: .2rem 1.2rem 0 1.4rem;
+						}
+					}
+				}
+			}
+		}
+
+		&__group-btn {
+			display:flex;
+			flex-direction:row;
+			padding-bottom: 1.2rem;
+		}
+
+		&__btn-send {
+			display: flex;
+			flex-direction: row;	
+		}
+
+		&__footer {
+			flex: 1;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: -1rem; 
+			margin: 0 -1.8rem;
+			width: calc(100% + 3.6rem);
+			height: 100%;
+			border-top: .1rem solid #bfbfd6;
+			background-color: #e5e3f6;
+			padding: .9rem;
+			position: relative;
+		}
+
+		&__resize {
+			position: absolute;
+			width: 1rem;
+			height: 1rem;
+			background: url('/images/ico_resize.png') no-repeat;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
