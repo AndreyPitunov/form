@@ -129,6 +129,7 @@ a:focus {
 		padding-bottom: 0;
 
 		&__row {
+			flex: 1;
 			width: 100%;
 			display: flex;
 		}
@@ -296,9 +297,9 @@ a:focus {
 		}
 
 		&__footer {
-			flex: 1;
 			display: flex;
 			justify-content: space-between;
+			align-items: flex-end;
 			margin-bottom: -1rem; 
 			margin: 0 -1.8rem;
 			width: calc(100% + 3.6rem);
